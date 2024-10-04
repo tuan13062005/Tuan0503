@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Thực hiện 4 phép tính cộng, trừ, nhân, chia</h1>
+</head>
+<body>
+    <input type="number" id="number1">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="number" id="number2">
+    <button onclick="calculate()">=</button>
+    <p id="result"></p>
+
+    <script>
+        function calculate() {
+            let num1 = parseFloat(document.getElementById("number1").value);
+            let num2 = parseFloat(document.getElementById("number2").value);
+            let operator = document.getElementById("operator").value;
+            let result;
+
+            switch (operator) {
+                case "+":
+                    result = num1 + num2;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    break;
+            }
+
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+    <p id="Kết Quả">Đáp số :</p>
+</body>
+<a href="Caculator.html"> Máy tính mô phỏng Caculator </a>
+</html>
